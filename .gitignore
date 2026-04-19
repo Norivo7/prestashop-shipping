@@ -112,9 +112,14 @@ themes/*/config/settings_*.json
 app/config/parameters.old.yml
 app/config/config.php
 
-# Themes, modules and overrides
+
+# Modules
 
 modules/*
+!/modules/ps_shipping/
+
+# Themes and overrides
+
 override/*
 themes/*/
 !themes/classic

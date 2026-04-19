@@ -20,10 +20,13 @@ services:
       DB_PASSWD: root
       PS_INSTALL_AUTO: 1
       PS_DOMAIN: localhost:8080
+      ADMIN_MAIL: admin@presta.com
+      ADMIN_PASSWD: admin
     depends_on:
       - db
     volumes:
       - ./modules:/var/www/html/modules
+      - ./themes:/var/www/html/themes
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

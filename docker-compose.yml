@@ -24,11 +24,13 @@ services:
       - db
     volumes:
       - ./modules/ps_shipping:/var/www/html/modules/ps_shipping
+      - ./theme_overrides/header.tpl:/var/www/html/themes/classic/templates/_partials/header.tpl
+      - ./theme_overrides/custom-header.css:/var/www/html/themes/classic/assets/css/custom-header.css
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    ports:
-      - "8081:80"
-    environment:
-      PMA_HOST: db
+      image: phpmyadmin/phpmyadmin
+      restart: always
+      ports:
+        - "8081:80"
+      environment:
+        PMA_HOST: db

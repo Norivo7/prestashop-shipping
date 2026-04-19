@@ -176,3 +176,6 @@ themes/default-bootstrap/modules/*/mails/*
 /vendor/
 /web/bundles/
 
+
+# PhpStorm
+.idea/
